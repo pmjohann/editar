@@ -9,7 +9,7 @@ Add this snipped to your .bashrc / .profile / .zprofile:
 
 ```sh
 editar() {
-    docker run --rm -it -v $1:/edit.tar ghcr.io/pmjohann/editar
+    docker run --rm -it -v $(dirname $1):/edit/$(dirname $1) ghcr.io/pmjohann/editar $1
 }
 ```
 
